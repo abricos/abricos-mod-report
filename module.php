@@ -10,13 +10,10 @@
  * @author Alexander Kuzmin (roosit@abricos.org)
  */
 
-$mod = new ReportModule();
-CMSRegistry::$instance->modules->Register($mod);
-
-class ReportModule extends CMSModule {
+class ReportModule extends Ab_Module {
 	
 	public function ReportModule(){
-		$this->version = "0.1";
+		$this->version = "0.1.1";
 		$this->name = "report";
 		$this->takelink = "report";
 	}
@@ -32,5 +29,7 @@ class ReportModule extends CMSModule {
 		return $cname;
 	}
 }
+
+Abricos::ModuleRegister(new ReportModule());
 
 ?>
